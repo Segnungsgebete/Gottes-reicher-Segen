@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://segungsgebete.github.io/Gottes-reichen-Segen/sitemap.xml
