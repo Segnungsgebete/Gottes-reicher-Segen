@@ -1,17 +1,242 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Gottes reichen Segen</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    body{font-family:Arial,Helvetica,sans-serif;background:#f7fbff;color:#222;padding:40px;text-align:center}
-    h1{color:#2b2d42;margin-bottom:8px}
-    p{color:#555;font-size:18px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gottes reichen Segen</title>
+    <style>
+        :root {
+            --gold: #d4af37;
+            --white: #ffffff;
+            --text: #333333;
+            --bg-light: #fafafa;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--white);
+            color: var(--text);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--gold), #f6e27a);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: var(--white);
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .about, .services, .contact {
+            text-align: center;
+        }
+
+        .services .card, .team-member {
+            background-color: var(--bg-light);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            max-width: 600px;
+        }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .team-member {
+            flex: 1 1 280px;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--gold);
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: var(--gold);
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .symbol {
+            font-size: 2em;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Gottes reichen Segen 🙏</h1>
-  <p>Willkommen auf meiner Seite. Möge Gottes Segen mit dir sein.</p>
+    <header>
+        <h1>Gottes reichen Segen</h1>
+        <p>Segnungsgebete & geistliche Begleitung für Herz und Seele</p>
+    </header>
+
+    <nav>
+        <a href="#about">Über uns</a>
+        <a href="#services">Segnungsgebete</a>
+        <a href="#team">Unser Team</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+
+    <section id="about" class="about">
+        <h2>Über uns</h2>
+        <p>„Gottes reichen Segen“ begleitet Menschen und Unternehmen mit Gebet, Glauben und Zuversicht. 
+           Unsere Segnungsgebete sollen Frieden, Heilung und Hoffnung schenken – in allen Lebensbereichen.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Kostenlose Segnungsgebete</h2>
+
+        <div class="card">
+    <div class="symbol">✝️</div>
+    <h3>Segnungen für Unternehmen</h3>
+    <p>Wir sprechen Segensgebete für Unternehmen, Teams und Arbeitsstätten, 
+       um Harmonie, Vertrauen und göttlichen Beistand zu fördern.</p>
+    <p><strong>Verfügbare Zeit:</strong><br>
+       Mo - Fr: 08:00 – 12:00 und 13:00 – 16:00</p>
+    <h4>Ablauf</h4>
+    <ul>
+        <li>Wir brauchen Gottes erlaubnis um ihr Unternehmen überhaupt zu Segnen.</li>
+        <li>Die Gebetszeit wird individuell nach Absprache geplant.</li>
+        <li>Wir kommen persönlich in Ihr Gebäude.</li>
+        <li>Ein Raum sollte für die Segnungszeit zur Verfügung stehen.</li>
+
+    </ul>
+</div>
+
+        <div class="card">
+    <div class="symbol">🙏</div>
+    <h3>Persönliche Segnungen</h3>
+    <p>Individuelle Gebete für Kraft, Heilung und geistliche Erneuerung</p>
+    <p><strong>Verfügbare Zeit:</strong> Samstag: 13:00 – 17:00</p>
+    <h4>Ablauf</h4>
+    <ul>
+        <li>Die Gebetszeit wird nach Absprache geplant.</li>
+        <li>Wir kommen persönlich vorbei.</li>
+    </ul>
+</div>
+
+        <div class="card">
+            <div class="symbol">🌟</div>
+            <h3>Feste & Anlässe</h3>
+            <p>Wir gestalten Gebete und Segensworte für besondere Anlässe wie Eröffnungen, Jubiläen oder Trauungen.</p>
+        </div>
+    </section>
+
+    <section id="spenden">
+    <h2>Spenden</h2>
+    <p>Unterstütze unsere Arbeit und die Segnungsgebete für Menschen und Unternehmen. 
+       Jeder Beitrag hilft, Gottes Segen weiterzugeben.</p>
+    
+    <div class="card">
+        <div class="symbol">💛</div>
+        <h3>So kannst du spenden</h3>
+        <ul>
+            <li>Banküberweisung: IBAN CH3000790042580716707, BIC: KBBECH22XXX</li>
+            <li>Twint: +41 75 416 99 15</li>
+            <li>Direkt vor Ort möglich</li>
+        </ul>
+        <p><strong>Hinweis:</strong> Jede Spende unterstützt unsere Arbeit und bleibt transparent und verantwortungsvoll.</p>
+    </div>
+</section>
+
+    <section id="team">
+        <h2>Unser Team</h2>
+        <div class="team">
+            <div class="team-member">
+                <img src="C:\Users\danie\OneDrive\Gottes reichen Segen\Dokumente\Images\WhatsApp Bild 2025-11-09 um 20.32.31_465042a4.jpg"
+                <h3>Basil Wittwer</h3>
+                <p><em>Gründer</em></p>
+                <p>Hat ein Herz für Menschen und Gott – sein Anliegen ist es, durch Gebet Hoffnung und Liebe weiterzugeben.</p>
+            </div>
+
+            <div class="team-member">
+                <img src="C:\Users\danie\OneDrive\Gottes reichen Segen\Dokumente\Images\WhatsApp Bild 2025-11-09 um 20.56.41_9351f62c.jpg"
+                <h3>Daniel Wittwer</h3>
+                <p><em>Gründer</em></p>
+                <p>Für ihn ist es zentral, Gottes Reich zu bauen und geistliche Werte in die Welt zu tragen.</p>
+            </div>
+
+            <div class="team-member">
+                <img src="C:\Users\danie\OneDrive\Gottes reichen Segen\Dokumente\Images\WhatsApp Bild 2025-11-09 um 21.03.13_0815b33c.jpg"
+                <h3>Jovin Forster</h3>
+                <p><em>Gründer</em></p>
+                <p>Jesus ist seine Nummer eins – er hilft dort, wo Gott ihn einsetzt, mit Hingabe und Glauben.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+    <h2>Kontakt</h2>
+    <p>Haben Sie Interesse an einem Segnungsgebet oder möchten mehr erfahren?<br>
+       Schreiben Sie uns gerne:</p>
+    <p><strong>E-Mail:</strong> <a href="mailto:daenuwi2@icloud.com" style="color: var(--gold); text-decoration: none;">daenuwi2@icloud.com</a></p>
+    <p><strong>Telefon:</strong> +41 75 416 99 15</p>
+</section>
+
+
+        
+    <footer>
+        <p>&copy; 2025 Gottes reichen Segen · Alle Rechte vorbehalten</p>
+    </footer>
 </body>
 </html>
