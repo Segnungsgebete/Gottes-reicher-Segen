@@ -169,6 +169,17 @@
     padding: 15px;
   }
 }
+        /* --- Sanftes Einblenden beim Scrollen --- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
     </style>
 </head>
 <body>
@@ -184,13 +195,13 @@
         <a href="#contact">Kontakt</a>
     </nav>
 
-    <section id="about" class="about">
+    <section id="about" class="about fade-in">
         <h2>Über uns</h2>
         <p>„Gottes reichen Segen“ begleitet Menschen und Unternehmen mit Gebet, Glauben und Zuversicht. 
            Unsere Segnungsgebete sollen Frieden, Heilung und Hoffnung schenken – in allen Lebensbereichen.</p>
     </section>
 
-    <section id="services" class="services">
+    <section id="services" class="about fade-in">
         <h2>Kostenlose Segnungsgebete</h2>
 
         <div class="card">
@@ -272,7 +283,7 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" class="about fade-in">
     <h2>Kontakt</h2>
     <p>Haben Sie Interesse an einem Segnungsgebet oder möchten mehr erfahren?<br>
        Schreiben Sie uns gerne:</p>
@@ -289,5 +300,19 @@
     <a href="datenschutz.html" style="color: white; text-decoration: underline;">Datenschutz</a>
   </p>
 </footer>
+<script>
+  // Elemente mit der Klasse "fade-in" beim Scrollen sanft anzeigen
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const revealOnScroll = () => {
+    fadeEls.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll(); // schon sichtbare Elemente sofort zeigen
+</script>
 </body>
 </html>
