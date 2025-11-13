@@ -1,338 +1,334 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-site-verification" content="wSF08_8rRooyxKfqyw1KTtyEaf5JHmfrv6okt8sUMVs" />
   <title>Gottes reichen Segen</title>
 
-    <style>
-        :root {
-            --gold: #d4af37;
-            --white: #ffffff;
-            --text: #333333;
-            --bg-light: #fafafa;
-        }
-
-        body {
-            margin: 0;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            background-color: var(--white);
-            color: var(--text);
-        }
-
-        /* 🖤 Schwarz-Grau-Verlauf im Header */
-    header {
-      background: linear-gradient(135deg, #000000, #555555);
-      color: var(--white);
-      text-align: center;
-      padding: 25px 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+  <style>
+    :root {
+      --gold: #d4af37;
+      --white: #ffffff;
+      --black: #000000;
+      --text-light: #f2f2f2;
     }
 
-    /* 🖤 Logo-Stil */
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--black);
+      color: var(--text-light);
+    }
+
+    /* 🖤 Header jetzt PECHSCHWARZ */
+    header {
+      background-color: var(--black);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 18px;
+      border-bottom: 2px solid rgba(255,255,255,0.12);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     header .logo {
-      width: 120px;
+      width: 100px;
       height: auto;
-      display: block;
-      margin: 0 auto 10px auto;
+      flex: 0 0 auto;
+    }
+
+    header .title-wrap {
+      text-align: left;
+      line-height: 1;
     }
 
     header h1 {
       font-size: 2em;
       margin: 0;
+      color: var(--gold);
       letter-spacing: 1.5px;
-      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      text-shadow: 0 1px 2px rgba(0,0,0,0.35);
     }
 
     header p {
+      margin: 6px 0 0 0;
+      color: var(--gold);
       font-size: 1em;
-      margin-top: 4px;
-      color: rgba(255, 255, 255, 0.9);
     }
 
     @media (max-width: 600px) {
       header {
-        padding: 18px 8px;
+        flex-direction: column;
+        text-align: center;
+        padding: 16px 12px;
       }
-
+      header .title-wrap {
+        text-align: center;
+      }
+      header .logo {
+        width: 80px;
+      }
       header h1 {
         font-size: 1.6em;
-        letter-spacing: 1px;
       }
-
       header p {
-        font-size: 0.9em;
-      }
-
-      header .logo {
-        width: 90px;
+        font-size: 0.95em;
       }
     }
-        nav {
-            background-color: var(--white);
-            text-align: center;
-            padding: 10px;
-            border-bottom: 1px solid #eee;
-            position: sticky;
-            top: 0;
-        }
 
-        nav a {
-            color: var(--gold);
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: 600;
-        }
+    /* ⚪ Navigation: weißer Balken, schwarze Schrift */
+    nav {
+      background-color: var(--white);
+      text-align: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    nav a {
+      color: var(--black);
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+    }
 
-        section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-        h2 {
-            color: var(--gold);
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      color: var(--text-light);
+    }
 
-        .about, .services, .contact {
-            text-align: center;
-        }
+    /* 🤍 Überschriften im Body jetzt weiß */
+    h2, h3, h4 {
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-        .services .card, .team-member {
-            background-color: var(--bg-light);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px auto;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            max-width: 600px;
-        }
+    .about, .services, .contact {
+      text-align: center;
+    }
 
-        .team {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+    .card, .team-member {
+      background-color: var(--black);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      border: 2px solid var(--white);
+      box-shadow: 0 4px 14px rgba(255,255,255,0.03);
+    }
 
-        .team-member {
-            flex: 1 1 280px;
-            text-align: center;
-        }
+    .symbol {
+      font-size: 2em;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
 
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--gold);
-            margin-bottom: 15px;
-        }
+    .services .card ul,
+    .card ul {
+      text-align: left;
+      margin: 0.5em 0 0 1.1em;
+      color: var(--text-light);
+    }
 
-        footer {
-            background-color: var(--gold);
-            color: var(--white);
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
 
-        .symbol {
-            font-size: 2em;
-            color: var(--gold);
-            margin-bottom: 10px;
-        }
+    .team-member {
+      flex: 1 1 280px;
+      text-align: center;
+    }
 
-        @media (max-width: 600px) {
-  body {
-    font-size: 16px;
-    padding: 0 10px;
-  }
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--white);
+      margin-bottom: 15px;
+    }
 
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 8px;
-  }
+    /* 🤍 Footer jetzt WEISS mit schwarzer Schrift */
+    footer {
+      background-color: var(--white);
+      color: var(--black);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
 
-  nav a {
-    font-size: 0.95em;
-    margin: 5px 8px;
-  }
+    footer a {
+      color: var(--black);
+      text-decoration: underline;
+    }
 
-  section {
-    padding: 40px 10px;
-  }
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      nav { padding: 8px; }
+      nav a { font-size: 0.95em; margin: 6px 8px; display: inline-block; }
+      section { padding: 40px 12px; }
+      .card { max-width: 95%; padding: 15px; }
+      .team-member img { width: 120px; height: 120px; }
+      footer { font-size: 0.9em; padding: 15px; }
+    }
 
-  .card {
-    max-width: 95%;
-    padding: 15px;
-  }
-
-  .team-member img {
-    width: 120px;
-    height: 120px;
-  }
-
-  footer {
-    font-size: 0.9em;
-    padding: 15px;
-  }
-}
-        /* --- Sanftes Einblenden beim Scrollen --- */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-    </style>
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body>
-    <header>
-  <img src="Gottes reichen Segen/Dokumente/Images/logo-grs.jpg" alt="G.R.S Logo" class="logo">
-  <h1>Gottes reichen Segen</h1>
-  <p>Segnungsgebete & geistliche Begleitung für Herz und Seele</p>
-</header>
 
-    <nav>
-        <a href="#about">Über uns</a>
-        <a href="#services">Segnungsgebete</a>
-        <a href="#team">Unser Team</a>
-        <a href="#contact">Kontakt</a>
-    </nav>
+  <header>
+    <img src="Gottes reichen Segen/Dokumente/Images/logo-grs.jpg" alt="G.R.S Logo" class="logo">
+    <div class="title-wrap">
+      <h1>Gottes reichen Segen</h1>
+      <p>Segnungsgebete & geistliche Begleitung für Herz und Seele</p>
+    </div>
+  </header>
 
-    <section id="about" class="about fade-in">
-        <h2>Über uns</h2>
-        <p>„Gottes reichen Segen“ begleitet Menschen und Unternehmen mit Gebet, Glauben und Zuversicht. 
-           Unsere Segnungsgebete sollen Frieden, Heilung und Hoffnung schenken – in allen Lebensbereichen.</p>
-    </section>
+  <nav>
+    <a href="#about">Über uns</a>
+    <a href="#services">Segnungsgebete</a>
+    <a href="#team">Unser Team</a>
+    <a href="#spenden">Spenden</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
 
-    <section id="services" class="about fade-in">
-        <h2>Kostenlose Segnungsgebete</h2>
+  <section id="about" class="about fade-in">
+    <h2>Über uns</h2>
+    <p>„Gottes reichen Segen“ begleitet Menschen und Unternehmen mit Gebet, Glauben und Zuversicht. 
+       Unsere Segnungsgebete sollen Frieden, Heilung und Hoffnung schenken – in allen Lebensbereichen.</p>
+  </section>
 
-        <div class="card">
-    <div class="symbol">✝️</div>
-    <h3>Segnungen für Unternehmen</h3>
-    <p>Wir sprechen Segensgebete für Unternehmen, Teams und Arbeitsstätten, 
-       um Harmonie, Vertrauen und göttlichen Beistand zu fördern.</p>
-    <p><strong>Verfügbare Zeit:</strong><br>
-       Mo - Fr: 08:00 – 12:00 und 13:00 – 16:00</p>
-    <h4>Ablauf</h4>
-    <ul>
-        <li>Wir brauchen Gottes Erlaubnis um ihr Unternehmen überhaupt zu Segnen.</li>
+  <section id="services" class="about fade-in">
+    <h2>Kostenlose Segnungsgebete</h2>
+
+    <div class="card">
+      <div class="symbol">✝️</div>
+      <h3>Segnungen für Unternehmen</h3>
+      <p>Wir sprechen Segensgebete für Unternehmen, Teams und Arbeitsstätten, 
+         um Harmonie, Vertrauen und göttlichen Beistand zu fördern.</p>
+      <p><strong>Verfügbare Zeit:</strong><br>
+         Mo - Fr: 08:00 – 12:00 und 13:00 – 16:00</p>
+      <h4>Ablauf</h4>
+      <ul>
+        <li>Wir brauchen Gottes Erlaubnis um Ihr Unternehmen überhaupt zu segnen.</li>
         <li>Die Gebetszeit wird individuell nach Absprache geplant.</li>
         <li>Wir kommen persönlich in Ihr Gebäude.</li>
         <li>Ein Raum sollte für die Segnungszeit zur Verfügung stehen.</li>
+      </ul>
+    </div>
 
-    </ul>
-</div>
-
-        <div class="card">
-    <div class="symbol">🙏</div>
-    <h3>Persönliche Segnungen</h3>
-    <p>Individuelle Gebete für Kraft, Heilung und geistliche Erneuerung</p>
-    <p><strong>Verfügbare Zeit:</strong> Samstag: 13:00 – 17:00</p>
-    <h4>Ablauf</h4>
-    <ul>
+    <div class="card">
+      <div class="symbol">🙏</div>
+      <h3>Persönliche Segnungen</h3>
+      <p>Individuelle Gebete für Kraft, Heilung und geistliche Erneuerung</p>
+      <p><strong>Verfügbare Zeit:</strong> Samstag: 13:00 – 17:00</p>
+      <h4>Ablauf</h4>
+      <ul>
         <li>Die Gebetszeit wird nach Absprache geplant.</li>
         <li>Wir kommen persönlich vorbei.</li>
-    </ul>
-</div>
+      </ul>
+    </div>
 
-        <div class="card">
-            <div class="symbol">🌟</div>
-            <h3>Feste & Anlässe</h3>
-            <p>Wir gestalten Gebete und Segensworte für besondere Anlässe wie Eröffnungen, Jubiläen oder Trauungen.</p>
-        </div>
-    </section>
+    <div class="card">
+      <div class="symbol">🌟</div>
+      <h3>Feste & Anlässe</h3>
+      <p>Wir gestalten Gebete und Segensworte für besondere Anlässe wie Eröffnungen, Jubiläen oder Trauungen.</p>
+    </div>
+  </section>
 
-    <section id="spenden">
+  <section id="spenden" class="fade-in">
     <h2>Spenden</h2>
     <p>Unterstütze unsere Arbeit und die Segnungsgebete für Menschen und Unternehmen. 
        Jeder Beitrag hilft, Gottes Segen weiterzugeben.</p>
-    
+
     <div class="card">
-        <div class="symbol">💛</div>
-        <h3>So kannst du spenden</h3>
-        <ul>
-            <li>Banküberweisung: IBAN CH3000790042580716707, BIC: KBBECH22XXX</li>
-            <li>Twint: +41 75 416 99 15</li>
-            <li>Direkt vor Ort möglich</li>
-        </ul>
-        <p><strong>Hinweis:</strong> Jede Spende unterstützt unsere Arbeit und bleibt transparent und verantwortungsvoll.</p>
+      <div class="symbol">💛</div>
+      <h3>So kannst du spenden</h3>
+      <ul>
+        <li>Banküberweisung: IBAN CH3000790042580716707, BIC: KBBECH22XXX</li>
+        <li>Twint: +41 75 416 99 15</li>
+        <li>Direkt vor Ort möglich</li>
+      </ul>
+      <p><strong>Hinweis:</strong> Jede Spende unterstützt unsere Arbeit und bleibt transparent und verantwortungsvoll.</p>
     </div>
-</section>
+  </section>
 
-    <section id="team">
-        <h2>Unser Team</h2>
-        <div class="team">
-            <div class="team-member">
-                <img src="Gottes reichen Segen/Dokumente/Images/basil.jpg" alt="Basil Wittwer">
-                <h3>Basil Wittwer</h3>
-                <p><em>Gründer</em></p>
-                <p>Hat ein Herz für Menschen und Gott – sein Anliegen ist es, durch Gebet Hoffnung und Liebe weiterzugeben.</p>
-            </div>
+  <section id="team" class="fade-in">
+    <h2>Unser Team</h2>
+    <div class="team">
+      <div class="team-member">
+        <img src="Gottes reichen Segen/Dokumente/Images/basil.jpg" alt="Basil Wittwer">
+        <h3>Basil Wittwer</h3>
+        <p><em>Gründer</em></p>
+        <p>Hat ein Herz für Menschen und Gott – sein Anliegen ist es, durch Gebet Hoffnung und Liebe weiterzugeben.</p>
+      </div>
 
-            <div class="team-member">
-                <img src="Gottes reichen Segen/Dokumente/Images/daniel.jpg" alt="Daniel Wittwer">
-                <h3>Daniel Wittwer</h3>
-                <p><em>Gründer</em></p>
-                <p>In allem, was er tut, möchte er Gottes Reich bauen und die Welt mit göttlicher Liebe erfüllen.</p>
-            </div>
+      <div class="team-member">
+        <img src="Gottes reichen Segen/Dokumente/Images/daniel.jpg" alt="Daniel Wittwer">
+        <h3>Daniel Wittwer</h3>
+        <p><em>Gründer</em></p>
+        <p>In allem, was er tut, möchte er Gottes Reich bauen und die Welt mit göttlicher Liebe erfüllen.</p>
+      </div>
 
-            <div class="team-member">
-                <img src="Gottes reichen Segen/Dokumente/Images/jovin.jpg" alt="Jovin Forster">
-                <h3>Jovin Forster</h3>
-                <p><em>Gründer</em></p>
-                <p>Jesus ist seine Nummer eins – er hilft dort, wo Gott ihn einsetzt, mit Hingabe und Glauben.</p>
-            </div>
-        </div>
-    </section>
+      <div class="team-member">
+        <img src="Gottes reichen Segen/Dokumente/Images/jovin.jpg" alt="Jovin Forster">
+        <h3>Jovin Forster</h3>
+        <p><em>Gründer</em></p>
+        <p>Jesus ist seine Nummer eins – er hilft dort, wo Gott ihn einsetzt, mit Hingabe und Glauben.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="about fade-in">
+  <section id="contact" class="about fade-in">
     <h2>Kontakt</h2>
     <p>Haben Sie Interesse an einem Segnungsgebet oder möchten mehr erfahren?<br>
        Schreiben Sie uns gerne:</p>
     <p><strong>E-Mail:</strong> <a href="mailto:daenuwi2@icloud.com" style="color: var(--gold); text-decoration: none;">daenuwi2@icloud.com</a></p>
     <p><strong>Telefon:</strong> +41 75 416 99 15</p>
-</section>
+  </section>
 
+  <footer>
+    <p>&copy; 2025 Gottes reichen Segen · Alle Rechte vorbehalten</p>
+    <p>
+      <a href="impressum.html">Impressum</a> · 
+      <a href="datenschutz.html">Datenschutz</a>
+    </p>
+  </footer>
 
-  
-    <footer>
-  <p>&copy; 2025 Gottes reichen Segen · Alle Rechte vorbehalten</p>
-  <p>
-    <a href="impressum.html" style="color: white; text-decoration: underline;">Impressum</a> · 
-    <a href="datenschutz.html" style="color: white; text-decoration: underline;">Datenschutz</a>
-  </p>
-</footer>
-<script>
-  // Elemente mit der Klasse "fade-in" beim Scrollen sanft anzeigen
-  const fadeEls = document.querySelectorAll('.fade-in');
-  const revealOnScroll = () => {
-    fadeEls.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        el.classList.add('visible');
-      }
-    });
-  };
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll(); // schon sichtbare Elemente sofort zeigen
-</script>
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const revealOnScroll = () => {
+      fadeEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) el.classList.add('visible');
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
 </body>
 </html>
